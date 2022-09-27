@@ -12,6 +12,32 @@ body{
     background-image: linear-gradient(to top, #000000 0%, rgb(119, 33, 218) 100%); 
 }
 
-.Barralateral {
-    background-color: beige;
+.Barra-lateral {
+    background-color: rgb(254, 234, 255);
+    width: 200px;
+    height: 180px;
+    box-sizing: border-box;
+    
+}
+
+#Menu{
+    list-style: none ;    
+    padding: 15px;
+}
+
+#Menu li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.temp{
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 500px;
+    
+}
+
+.temp h2{
+    font-size: 20px;
 }

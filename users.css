@@ -30,14 +30,8 @@ body{
     text-decoration: none;
 }
 
-.temp{
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    width: 500px;
-    height: 500px;
+#user-icon {
     
-}
-
-.temp h2{
-    font-size: 20px;
+    text-decoration: none;
+    width: 26px;
 }

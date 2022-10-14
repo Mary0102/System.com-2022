@@ -49,7 +49,7 @@ body{
 
 .li-item{
     display: inline-flex;
-    padding: 5px;
+    padding: 6px;
 }
 
  .bloco:hover, .active {

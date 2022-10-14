@@ -11,18 +11,35 @@ body{
     opacity: .95;
     background-image: linear-gradient(to top, #000000 0%, rgb(119, 33, 218) 100%); 
 }
-
-.Barra-lateral {
-    background-color: rgb(254, 234, 255);
-    width: 200px;
-    height: 180px;
+/*-------------- Anside---------------------*/
+.Dentro-barra {
+    background-color: rgb(255, 255, 255);
+    width:200px;
     box-sizing: border-box;
     
 }
 
+#formaft{
+    width:70px ;
+    height:70px ;
+    border-radius: 90px;
+}
+
+.bloco{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 30px;
+
+}
+#user-icon {
+    
+    text-decoration: none;
+    width: 26px;
+}
+
 #Menu{
     list-style: none ;    
-    padding: 15px;
+    padding: 0px;
 }
 
 #Menu li a{
@@ -30,8 +47,13 @@ body{
     text-decoration: none;
 }
 
-#user-icon {
-    
-    text-decoration: none;
-    width: 26px;
+.li-item{
+    display: inline-flex;
+    padding: 5px;
 }
+
+ .bloco:hover, .active {
+    background-color: #6d6d6d;
+}
+
+/*-------------- Anside---------------------*/

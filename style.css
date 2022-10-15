@@ -89,7 +89,7 @@ header p {letter-spacing: 0.05em;}
 
 
 /* Show/hide password Font Icon */
-/*#eye {
+#eye {
     background: #fff;
     color: #333;
   
@@ -105,7 +105,7 @@ header p {letter-spacing: 0.05em;}
     z-index: 5;
     
     cursor: pointer;
-}*/
+}
 /* inputs form  */
 input[class="form-input"]{
     width: 250px;

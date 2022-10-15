@@ -12,12 +12,20 @@ body{
     background-image: linear-gradient(to top, #000000 0%, rgb(119, 33, 218) 100%); 
 
 }
-/*-------------- Anside---------------------*/
 
 .allpage {
     display: flex;
     align-items: center;
 }
+
+#Logo{ /*Barra de cima*/
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/*-------------- Anside---------------------*/
 
 .Dentro-barra {
     background-color: rgb(255, 255, 255);
@@ -28,11 +36,11 @@ body{
     
 }
 
-#formaft{
+#formaft{ /*----- Inclui espaçamento ------*/
     width:70px ;
     height:70px ;
     border-radius: 90px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .bloco{
@@ -49,6 +57,7 @@ body{
 }
 
 #icon{ /*Icons do menu*/
+
     margin-right: 7px; /*espaço entre o icon e o nomes do menu*/
 }
 
@@ -76,10 +85,24 @@ body{
 /*-------------- End Anside---------------------*/
 
 
-/*-------------- Section -------------------*/
-    #centro-pg{
-        display: inline;
+/*-------------- Section "Main" --------------------*/
+
+    .Bloco-inside{
+        padding: 10px;
+        text-align: center;
+        background-color: beige;
+        width: 200%;
+        height:40vh;
+        border-radius: 20px;
+    }
+    
+    #Bloco-pedido{
+        padding: 190px;
     }
 
-/*-------------- End Section -------------------*/
+    .Name-pedido{
+        color: rgb(0, 0, 0);
+    }
+
+/*-------------- End Section "Main" -------------------*/
 

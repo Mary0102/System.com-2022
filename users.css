@@ -41,12 +41,13 @@ body{
     height:70px ;
     border-radius: 90px;
     padding: 5px;
+    margin: 8px;
 }
 
 .bloco{
     background-color: rgb(255, 255, 255);
     width: 200px;
-    height: 30px;
+    height: 40px;
     
 
 }

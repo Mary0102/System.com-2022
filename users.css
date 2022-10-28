@@ -107,3 +107,36 @@ body{
 
 /*-------------- End Section "Main" -------------------*/
 
+                                    /*Estilizando Outra pagina*/
+/*--------------------------------------    CONFGUSER  -----------------------------------*/
+
+/**/
+.folha-centro{
+    margin-top: 10%;
+    margin-left: 25%;
+    align-items: center;
+    background-color: beige;
+    width: 50%;
+    height: 50%;  
+}
+
+#inside-folha-centro{
+    margin: 5%;
+}
+
+#inside-folha-centro h3{
+    text-align: center;
+}
+
+.formaft-edit{
+    width:90px ;
+    height:90px ;
+    border-radius: 90px;
+    padding: 5px;
+    margin: 8px;
+}
+
+#display{
+    display: inline;
+}
+

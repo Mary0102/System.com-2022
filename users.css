@@ -103,6 +103,7 @@ body{
 
     .Name-pedido{
         color: rgb(0, 0, 0);
+        font-size: 20px;
     }
 
 /*-------------- End Section "Main" -------------------*/
@@ -138,5 +139,10 @@ body{
 
 #display{
     display: inline;
+}
+
+#Outras-confg {
+    font-weight: bold;
+    margin-left: 50px;
 }
 

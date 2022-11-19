@@ -1,11 +1,18 @@
 <?php
     $servidor="localhost";
-    $usuario="root";
-    $senha="";
-    $dbname="cad_pfísica";
+    $usuario="Mariana";
+    $senha="Andromeda";
+    $dbname="system.com";
 
-    $conexao=mysqli_connect($servidor, $usuario, $senha, $dbname);
-    if (!$conexao){
+    $conexao = new mysqli($servidor, $usuario, $senha, $dbname);
+
+    if ($conexao -> connect_errno){
         die("Houve um erro: ".mysqli_connect_error());
+    }
+    else{
+        //echo "conexão efetuada com sucesso";
+        echo '<script type="text/JavaScript"> 
+                alert("Inscrição realizada com sucesso!");
+              </script>';
     }
 ?>

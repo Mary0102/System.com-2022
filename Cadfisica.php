@@ -17,7 +17,7 @@
       $tell = $_POST['tell'];
       $cpf = $_POST['cpf'];
 
-      $result = mysqli_query($conexao, "INSERT INTO usuarios_np(nome, senha, email, telefone, cpf) VALUES ('$nome', '$senha', '$email', '$tell', '$cpf' )");
+      $result = mysqli_query($conexao, "INSERT INTO cad_user_np(nome, senha, email, telefone, cpf) VALUES ('$nome', '$senha', '$email', '$tell', '$cpf' )");
    }
 ?>
 

@@ -1,3 +1,15 @@
+<?php
+   if(isset($_POST['submit'])){
+      print_r("Funcionou");
+
+      include_once('conexao.php');
+      $email = $_POST['email'];
+      $senha = $_POST['senha'];
+
+      $result = mysqli_query($conexao, "INSERT INTO login_user_np(email, senha) VALUES ('$email', '$senha')");
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -10,7 +22,7 @@
 <!-- partial:index.partial.html -->
 <div class="overlay">
 
-<form action="userlogin.php" method="POST"> <!--Para onde vai?-->
+<form action="Login.php" method="POST"> <!--Para onde vai?-->
 
    <!--   con = Container  for items in the form-->
    <div class="con">
@@ -33,7 +45,7 @@
          <i class="fa fa-envelope-open"></i>
       </span>   
       <!--  Email Input -->  
-      <input class="form-input" type="email" placeholder="Email" id="email" required>
+      <input class="form-input" type="email" placeholder="Email" id="email" name="email" required>
 
          <br>    
      
@@ -42,25 +54,27 @@
         <i class="fa fa-key"></i>
        </span>
       <!--   Password Input-->
-      <input class="form-input" type="password" placeholder="Senha" id="pwd"  name="Senha" required>
+      <input class="form-input" type="password" placeholder="Senha" id="pwd"  name="senha" required>
 
          <br>
 <!----------------------------  End inputs ---------------------------------------------->
 
 <!-------------------------------- button LogIn ------------------------------------->
-      <button class="log-in"> Login </button>
+      <button class="log-in" name="submit"> Login </button>
    </div>
 <!-------------------------------- button LogIn ------------------------------------->
+
+</form>
 
    <!----------------------------   other buttons ----------------------------------->
    <div class="other">
       <!--      Forgot Password button-->
             <button class="btn submits frgt-pass">Esqueci a senha</button>
       <!--     Sign Up button -->
-            <button class="btn submits sign-up">Inscreva-se
-      <!--         Sign Up font icon -->
+            <a href="Cadastro.html"><button class="btn submits sign-up">Inscreva-se
+      <!--     Sign Up font icon -->
             <i class="fa fa-user-plus" aria-hidden="true"></i>
-            </button>
+            </button></a>
    </div>
    <!-----------------------  End Other the Division -------------------------------->
    
@@ -70,7 +84,7 @@
   </div>
   
   <!-- End Form -->
-</form>
+
 </div>
 <!-- partial -->
   <script  src="./script.js"></script>

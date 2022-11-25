@@ -10,9 +10,9 @@
         die("Houve um erro: ".mysqli_connect_error());
     }
     else{
-        //echo "conexão efetuada com sucesso";
-        echo '<script type="text/JavaScript"> 
-                alert("Inscrição realizada com sucesso!");
-              </script>';
+        echo "conexão efetuada com sucesso";
+       // echo '<script type="text/JavaScript"> 
+       //         alert("Inscrição realizada com sucesso!");
+       //       </script>';
     }
 ?>

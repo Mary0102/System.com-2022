@@ -20,6 +20,35 @@
     <style>
         body {
           background-color: rgb(2, 2, 2);
+          
+        }
+
+        .contatos{
+          padding-left: 30%;
+        }
+
+        .box {
+            width: 30px;
+            display: inline-block;
+            
+            padding: 2px;
+          }
+
+          .box :hover{
+            background-color: rgb(173, 101, 255);
+            border-radius: 10px;
+          }
+
+        .direitos{
+          height: 50px;
+          width: 100%;
+          background-color: black;
+        }
+
+        .direitos p{
+          text-align: center;
+          color: aliceblue;
+          margin-top: 40px;
         }
       </style>
 
@@ -29,7 +58,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#"> System.com </a>
+        <a class="navbar-brand" href="System.html"> System.com </a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <a class="nav-link" href="Sobre.html"> Sobre <span class="sr-only">(Página atual)</span></a>
@@ -37,12 +66,25 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#"> Destaques </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#"> Contatos </a>
-          </li>
         </ul>
+        <div class="contatos">
+          <div class="box">
+              <a href="#"><img width="40px" src="Image/icon-face.png"/></a>
+          </div>
+          <div class="box">
+              <a href="#"><img width="40px" src="Image/icon-wpp.png"/></a>
+          </div>
+          <div class="box">
+              <a href="#"><img width="40px" src="Image/icon-tt.png"/></a>
+          </div>
+          <div class="box">
+            <a href="#"><img width="40px" src="Image/icon-insta.png"/></a>
+        </div>
+      </div>
       </div>
     </nav>
+
+
     
 
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
@@ -67,48 +109,19 @@
         <h3 style="color:aliceblue;font-family:EB Garamond"> Faça seu login ou cadastre-se <br/> para encomendar um aplicativo.</h3>
 
     <!--Centraliza o botao-->
-      <div style="width: 30%;
-        height: 30%;
-        margin: 0 auto;
-        padding: 10px;
-        position: relative;">          
-                <br/>
-                <br/>
-                
-              <a href="Login.php"> <button type="button" class="btn btn-dark btn-lg btn-block">Login </button> </a>
-                 <p> </p>
-              <a href="cadastro.html"><button type="button" class="btn btn-dark btn-lg btn-block"> Cadastro </button></a>
+      <div style="width: 30%; height: 30%; margin: 0 auto; padding: 10px; position: relative;">          
+          <br/><br/>   
+            <a href="Login.php"> <button type="button" class="btn btn-dark btn-lg btn-block">Login </button> </a>
+              <p> </p>
+            <a href="cadastro.html"><button type="button" class="btn btn-dark btn-lg btn-block"> Cadastro </button></a>
       </div>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/> 
-  </div><!--Muda a cor de um pedaço da pagina-->
-
+          <br/><br/>
+          <br/><br/> 
+    </div><!--Muda a cor de um pedaço da pagina-->      
   
-      <div class="box">
-          <a href="#"><img width="40px" src="Image/icon-face.png"/></a>
-      </div>
-
-      <div class="box">
-          <a href="#"><img width="40px" src="Image/icon-wpp.png"/></a>
-      </div>
-
-      <div class="box">
-          <a href="#"><img width="40px" src="Image/icon-tt.png"/></a>
-      </div>
-
-      <div class="box">
-        <a href="#"><img width="40px" src="Image/icon-insta.png"/></a>
+    <div class="direitos">
+      <p> © 2022 System.com. Todos os direitos reservados. </p>
     </div>
-          <style>
-          div.box {
-            width: 30px;
-            display: inline-block;
-          }
-          </style>
 
-
-</body>
-
+  </body>
 </html>

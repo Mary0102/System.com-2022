@@ -11,4 +11,6 @@
     $current .= $_POST['nome'].', '.$_POST['mail'].', '.$_POST['sexo'][0]."\n";
     //Adicionar conteúdo todo ao arquivo
     file_put_contents($file, $current);
+
+    /* Como criar formulário e cadastrar com PHP e MySQLi no Banco de Dados - CELKE*/ 
 ?>

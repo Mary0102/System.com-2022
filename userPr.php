@@ -92,6 +92,11 @@
                     <!--Barra de Pesquisa--> 
 
   <!-----------------    Seções  ------------------>
+
+  <?php
+    include_once('pedido.php');
+    
+  ?>
   
   <div class="Space-bloco">
     <div id="Bloco-pedido">

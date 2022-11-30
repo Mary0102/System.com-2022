@@ -1,7 +1,10 @@
 <?php
+    
     $servidor="localhost";
-    $usuario="Mariana";
-    $senha="Andromeda";
+    $usuario="root";
+    $senha="";
+    //$usuario="Mariana";
+    //$senha="Andromeda";
     $dbname="system.com";
 
     $conexao = new mysqli($servidor, $usuario, $senha, $dbname);

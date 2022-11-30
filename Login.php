@@ -1,13 +1,30 @@
 <?php
-   if(isset($_POST['submit'])){
-      print_r("Funcionou");
+   include_once('conexao.php');
+   if(isset($_POST['email']) || isset($_POST['senha'])) {
 
-      include_once('conexao.php');
-      $email = $_POST['email'];
-      $senha = $_POST['senha'];
+      if(strlen($_POST['email']) == 0) {
+          echo "Preencha seu e-mail";
+      } else if(strlen($_POST['senha']) == 0) {
+          echo "Preencha sua senha";
+      } else {
+  
+          $email = $mysqli->real_escape_string($_POST['email']);
+          $senha = $mysqli->real_escape_string($_POST['senha']);
 
-      $result = mysqli_query($conexao, "INSERT INTO login_user_np(email, senha) VALUES ('$email', '$senha')");
+          $sql_code = "SELECT * FROM cad_user_np WHERE email = '$email' AND senha = '$senha'";
+          $sql_query = $mysqli->query($sql_code) or die("Falha na execução do codigo SQL: " . $mysqli->error);
+      }
+
    }
+   //if(isset($_POST['submit'])){
+   //   print_r("Funcionou");
+
+      
+   //   $email = $_POST['email'];
+   //   $senha = $_POST['senha'];
+
+   //   $result = mysqli_query($conexao, "INSERT INTO login_user_np(email, senha) VALUES ('$email', '$senha')");
+  // }
 ?>
 
 <!DOCTYPE html>

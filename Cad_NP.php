@@ -1,4 +1,5 @@
 <?php
+   session_start();
    if(isset($_POST['submit'])){
       //print_r('Nome: '.$_POST['nome']);
       //print_r('<br>');
@@ -17,10 +18,19 @@
       $tell = $_POST['tell'];
       $cpf = $_POST['cpf'];
 
-      $result = mysqli_query($conexao, "INSERT INTO cad_user_np(nome, senha, email, telefone, cpf) VALUES ('$nome', '$senha', '$email', '$tell', '$cpf' )");
+      $result_userNP = mysqli_query($conexao, "INSERT INTO cad_user_np(nome, senha, email, telefone, cpf) VALUES ('$nome', '$senha', '$email', '$tell', '$cpf' )");
+      //$resultado_usuario_np = 
+   
+      if(mysqli_insert_id($conexao)){
+         $_SESSION['msg'] = "<p style = 'color:green';> Usuário cadastrado com sucesso</p>";
+         header("Location: pedido.html");//Retorna para a pagina de cadastro
+      } else{
+         $_SESSION['msg'] = "<p style = 'color:red';> Usuário não foi cadastrado com sucesso</p>";
+         header("Location: Cad_NP.php");
+      }
    }
 ?>
-
+   
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -33,7 +43,7 @@
 <!-- partial:index.partial.html -->
 <div class="overlay">
 <!-- LOGN IN FORM by Omar Dsoky -->
-<form action="Cadfisica.php" method="POST">
+<form action="Cad_Np.php" method="POST">
    
    <!--   con = Container  for items in the form-->
    <div class="con">
@@ -43,6 +53,12 @@
       <br>
       <!--     A welcome message or an explanation of the login form -->
       <p>Insira suas informações.</p>
+      <?php
+         if(isset($_SESSION['msg'])){//Se existir essa variavel...
+            echo $_SESSION['msg'];//Imprime o valor dessa variavel
+            unset($_SESSION['msg']);//Destroi a variavel(Não permite a repetição da mesma)
+         }
+      ?>
    </header>
    <!--     End  header Content  -->
    <br>

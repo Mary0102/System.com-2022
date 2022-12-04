@@ -37,6 +37,7 @@
   <meta charset="UTF-8">
   <title>Cadastro - Pessoa Física</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
 </head>
 <body>
@@ -100,6 +101,11 @@
 
       <!--  Telefone input-->
       <input class="form-input" type="tel" placeholder="Telefone" id="cell" name="tell" required>
+         <script>
+            $( "#cell" ).keypress(function() {
+            $(this).mask('(00) 0000-00009');
+            });
+         </script>
 
       <br>
 

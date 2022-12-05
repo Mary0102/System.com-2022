@@ -1,5 +1,6 @@
 <?php
-  include_once('conexao.php' and 'Pedido.php');
+  include_once('conexao.php');
+
 
 ?>
 
@@ -11,7 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do usuário</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./users.css">
+    <link rel='stylesheet' href='users.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -76,7 +78,7 @@
             <div class="bloco">
               <span class="li-item">
                 <i class="fa fa-plus-square-o" style="font-size:24px" id="icon"></i>
-                <li><a href="Pedido.html"><p>Novo pedido</p></a></li>
+                <li><a href="Pedido.php"><p>Novo pedido</p></a></li>
               </span>
             </div>
              
@@ -89,24 +91,68 @@
           </ul>
         </div>
       </aside>
+      <style>
+        .Barra-lateral{
+          height: 100%;
+          position: absolute;
+          margin-top: 0px;
+          
+        }
+
+        .allpage{
+          margin-top: 0px;
+          position: absolute;
+        }
+      </style>
 
   <!-------------------- Fim Area User -------------------->
 
                     <!--Barra de Pesquisa--> 
 
   <!-----------------    Seções  ------------------>
-  
+<main>  
   <div class="Space-bloco">
     <div id="Bloco-pedido">
-      <main class="Bloco-inside">
-        <h1 class="Name-pedido">Não possui nenhum pedido</h1>
-        <?php
-          print_r('Descrição: '.$_POST['pedido']);
-        ?>
-      </main>
+      <div class="Bloco-inside">
+        <div class="title-pedido" style="background-color: black;">
+          <h1 class="Name-pedido" style="color: #ffff ;" >Descrição</h1>
+        </div>
+          <br>
+            <div class="pedido">
+              <?php
+                print_r($_POST['pedido']);
+              ?>
+            </div>
+          <br>   
+      </div>
     </div>
   </div>
+</main>
 
+  <style>
+    .title-pedido{
+      width: 100%;
+      height: 12%;
+      border-top-right-radius: 20px;
+      border-top-left-radius:20px ;
+      
+    }
+    .title-pedido h1{
+      padding-top: 2px;
+    }
+    .Bloco-inside{
+      margin: 0px;
+      padding: 0px;
+      width: 600px;
+      height: auto;
+    }
+
+    .Space-bloco{
+      padding-left: 25%
+     
+    }
+    
+  </style>
 
   <!-----------------    Fim Seções  ----------------->
     

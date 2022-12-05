@@ -7,7 +7,7 @@
     $pedido = $_POST['pedido'];
 
     $result_descricao = mysqli_query($conexao, "INSERT INTO pedido(descricao) VALUES ('$pedido')");
-
+    
 }
 ?>
 
@@ -137,7 +137,7 @@
     </h6>
 </div>
 <div>
-  <form action="pedido.php" method="POST">
+  <form action="userNP.php" method="POST">
     <div class="area-texto">
       <textarea id="tiny" name="pedido"></textarea>
     </div>

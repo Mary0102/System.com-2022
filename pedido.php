@@ -1,12 +1,14 @@
 <?php
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['enviar'])){
       //  print_r('Descrição: '.$_POST['pedido']);
     
     include_once('conexao.php');
     $pedido = $_POST['pedido'];
 
     $result_descricao = mysqli_query($conexao, "INSERT INTO pedido(descricao) VALUES ('$pedido')");
+
+    header('Location: userNP.php');
     
 }
 ?>
@@ -143,7 +145,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="uwyzi3azphk9bvd9sn47xkrttutdjb0rhcs8pp14xdklcrhc" crossorigin="anonymous"></script>
         <br>
-      <button id="save" name="submit">Enviar</button>
+      <button id="save" name="enviar">Enviar</button>
   </form>
 </div>
 

@@ -23,7 +23,7 @@
    
       if(mysqli_insert_id($conexao)){
          $_SESSION['msg'] = "<p style = 'color:green';> Usuário cadastrado com sucesso</p>";
-         header("Location: pedido.html");//Retorna para a pagina de cadastro
+         header("Location: pedido.php");//Retorna para a pagina de cadastro
       } else{
          $_SESSION['msg'] = "<p style = 'color:red';> Usuário não foi cadastrado com sucesso</p>";
          header("Location: Cad_NP.php");
@@ -44,7 +44,7 @@
 <!-- partial:index.partial.html -->
 <div class="overlay">
 <!-- LOGN IN FORM by Omar Dsoky -->
-<form action="Cad_Np.php" method="POST">
+<form action="pedido.php" method="POST">
    
    <!--   con = Container  for items in the form-->
    <div class="con">
@@ -123,7 +123,7 @@
 
 <!--  button -->
 
-      <button class="log-in" name="submit"> Cadastre-se </button>
+      <a href="Pedido.php"><button class="log-in" name="submit"> Cadastre-se </button></a>
       
       
    </div>

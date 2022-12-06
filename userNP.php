@@ -1,7 +1,6 @@
 <?php
   include_once('conexao.php');
 
-
 ?>
 
 
@@ -45,7 +44,11 @@
           <!--  Foto do usuario, e seções que ele possa navegar-->
           <div class="user-icon">
             <img src="Image/user-icon.png" alt="testephoto" id="formaft">
-            <span id="user-name">Name</span>
+            <span id="user-name">Usuario
+             <!-- <?php
+              //  print_r($_POST['nome']);
+              ?> -->
+            </span>
           </div>
           <!--End Foto User-->
 
@@ -71,7 +74,7 @@
             <div class="bloco">
               <span class="li-item">
                 <i class="fa fa-edit" style="font-size:24px" id="icon"></i>
-                <li><a href="userNP.html"><p>Meus Pedidos</p></a></li>
+                <li><a href="userNP.php"><p>Meus Pedidos</p></a></li>
               </span>
             </div>
               
@@ -117,13 +120,23 @@
         <div class="title-pedido" style="background-color: black;">
           <h1 class="Name-pedido" style="color: #ffff ;" >Descrição</h1>
         </div>
-          <br>
-            <div class="pedido">
-              <?php
-                print_r($_POST['pedido']);
-              ?>
-            </div>
-          <br>   
+        <br>
+          <div class="pedido">
+            <?php
+              print_r($_POST['pedido']);
+              //$sql = "SELECT * FROM pedido WHERE descricao ";
+              //$result = $conexao->query($sql);
+              //print_r($result);
+              // if(mysqli_num_rows($result) <1){
+                //  echo "Não possui nenhum pedido";
+                //}else{
+                  //Caso exista algum pedido
+                  
+                //}  
+            ?>
+            <br>
+          </div>
+        <br>   
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 30-Nov-2022 às 10:41
+-- Tempo de geração: 06-Dez-2022 às 05:30
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -31,7 +31,7 @@ CREATE TABLE `cad_user_np` (
   `id` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL,
   `senha` varchar(45) NOT NULL,
-  `email` varchar(110) NOT NULL,
+  `email` varchar(220) NOT NULL,
   `telefone` int(11) NOT NULL,
   `cpf` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,39 +41,30 @@ CREATE TABLE `cad_user_np` (
 --
 
 INSERT INTO `cad_user_np` (`id`, `nome`, `senha`, `email`, `telefone`, `cpf`) VALUES
-(1, 'Mariana Souza', 'socorro123', 'Mariana@gmail.com', 2147483647, 2147483647),
-(2, 'Mariana', 'socorro123', 'Mariana@gmail.com', 2147483647, 2147483647),
-(3, 'Mariana', 'socorro123', 'Mariana@gmail.com', 2147483647, 2147483647),
-(4, 'Julia Marques', '123456', 'jujuba@gmail.com', 12345678, 2147483647),
-(5, 'Raissa', 'raissa1234', 'ray@gmail.com', 989766543, 2147483647),
-(6, 'Raissa', 'Andromeda', 'ray@gmail.com', 989766543, 123456789),
-(7, 'Raissa', 'Andromeda', 'ray@gmail.com', 989766543, 2147483647),
-(8, 'Raissa', 'Andromeda', 'ray@gmail.com', 989766543, 2147483647),
-(9, 'Raissa', 'Andromeda', 'ray@gmail.com', 989766543, 99988877),
-(10, 'Paula', 'jaca123', 'Paula@gmail.com', 989766543, 667755324),
-(11, 'Raissa', 'Andromeda', 'Mariana@gmail.com', 989766543, 1234532146);
+(21, 'Mari', '12345', 'm@gmail.com', 11223344, 22222222);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `login_user_np`
+-- Estrutura da tabela `pedido`
 --
 
-CREATE TABLE `login_user_np` (
-  `email` varchar(45) NOT NULL,
-  `senha` varchar(45) NOT NULL
+CREATE TABLE `pedido` (
+  `idPedido` int(11) NOT NULL,
+  `descricao` varchar(900) DEFAULT NULL,
+  `nome_usuario` varchar(45) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `email_usuario` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `login_user_np`
+-- Extraindo dados da tabela `pedido`
 --
 
-INSERT INTO `login_user_np` (`email`, `senha`) VALUES
-('socorro@gmail.com', '12345'),
-('socorro@gmail.com', '12345'),
-('socorro@gmail.com', '12345'),
-('Mariana@gmail.com', 'Andromeda'),
-('Mariana@gmail.com', 'Andromeda');
+INSERT INTO `pedido` (`idPedido`, `descricao`, `nome_usuario`, `id_usuario`, `email_usuario`) VALUES
+(11, '<p>aaaaabbbbbbbbbbcccccccc</p>', NULL, NULL, NULL),
+(12, '<p>socorro</p>', NULL, NULL, NULL),
+(13, '<p>socorro1234</p>', NULL, NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -83,7 +74,14 @@ INSERT INTO `login_user_np` (`email`, `senha`) VALUES
 -- Índices para tabela `cad_user_np`
 --
 ALTER TABLE `cad_user_np`
-  ADD PRIMARY KEY (`id`,`cpf`,`email`);
+  ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
+-- Índices para tabela `pedido`
+--
+ALTER TABLE `pedido`
+  ADD PRIMARY KEY (`idPedido`),
+  ADD KEY `id-user` (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -93,7 +91,23 @@ ALTER TABLE `cad_user_np`
 -- AUTO_INCREMENT de tabela `cad_user_np`
 --
 ALTER TABLE `cad_user_np`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de tabela `pedido`
+--
+ALTER TABLE `pedido`
+  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `pedido`
+--
+ALTER TABLE `pedido`
+  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `cad_user_np` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

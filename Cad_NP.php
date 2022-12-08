@@ -44,7 +44,7 @@
 <!-- partial:index.partial.html -->
 <div class="overlay">
 <!-- LOGN IN FORM by Omar Dsoky -->
-<form action="pedido.php" method="POST">
+<form action="Cad_NP.php" method="POST">
    
    <!--   con = Container  for items in the form-->
    <div class="con">

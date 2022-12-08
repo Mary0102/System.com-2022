@@ -3,7 +3,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -37,8 +36,57 @@
     </style>
     <!------------------ Fim NavBar --------------------->
 
-    <!----------------- Area User ----------------------->
+  
 <div class="allpage">
+
+<style>
+  .Space-barra{
+    background-color: #ffff;
+    width: 37%;
+    height: 700px;
+  }
+
+  main{
+    position: absolute;
+  }
+
+
+</style>
+
+<!-----------------    Pedidos  ------------------>
+<main>  
+  <div class="Space-bloco">
+    <div id="Bloco-pedido">
+      <div class="Bloco-inside">
+        <div class="title-pedido" style="background-color: black;">
+          <h1 class="Name-pedido" style="color: #ffff ;" >Descrição</h1>
+        </div>
+        <br>
+          <div class="pedido">
+            <?php
+              print_r($_POST['pedido']);
+              //$sql = "SELECT * FROM pedido WHERE descricao ";
+              //$result = $conexao->query($sql);
+              //print_r($result);
+              // if($_POST['pedido']) == null{
+               //   echo "Não possui nenhum pedido";
+                //}else{
+                  //Caso exista algum pedido
+                  
+              //  }  
+            ?>
+            <br>
+          </div>
+        <br>   
+      </div>
+    </div>
+  </div>
+</main>
+<!-----------------   END Pedidos  ------------------>
+
+ <!------------------- Area User ----------------------->
+<!-----------------   Menu Lateral ------------------>
+<div class= "Space-barra">
       <aside class="Barra-lateral">
         <div class="Dentro-barra">
           <!--  Foto do usuario, e seções que ele possa navegar-->
@@ -94,9 +142,12 @@
           </ul>
         </div>
       </aside>
+</div>
+<!-----------------  END Menu Lateral ------------------>
+
       <style>
         .Barra-lateral{
-          height: 100%;
+          height: 700px;
           position: absolute;
           margin-top: 0px;
           
@@ -110,38 +161,6 @@
 
   <!-------------------- Fim Area User -------------------->
 
-                    <!--Barra de Pesquisa--> 
-
-  <!-----------------    Seções  ------------------>
-<main>  
-  <div class="Space-bloco">
-    <div id="Bloco-pedido">
-      <div class="Bloco-inside">
-        <div class="title-pedido" style="background-color: black;">
-          <h1 class="Name-pedido" style="color: #ffff ;" >Descrição</h1>
-        </div>
-        <br>
-          <div class="pedido">
-            <?php
-              print_r($_POST['pedido']);
-              //$sql = "SELECT * FROM pedido WHERE descricao ";
-              //$result = $conexao->query($sql);
-              //print_r($result);
-              // if(mysqli_num_rows($result) <1){
-                //  echo "Não possui nenhum pedido";
-                //}else{
-                  //Caso exista algum pedido
-                  
-                //}  
-            ?>
-            <br>
-          </div>
-        <br>   
-      </div>
-    </div>
-  </div>
-</main>
-
   <style>
     .title-pedido{
       width: 100%;
@@ -152,6 +171,8 @@
     }
     .title-pedido h1{
       padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 26px;
     }
     .Bloco-inside{
       margin: 0px;

@@ -29,6 +29,7 @@ body{
 
 /*-------------- Anside---------------------*/
 
+
 .Dentro-barra {
     background-color: rgb(255, 255, 255);
     position: relative;
@@ -67,6 +68,7 @@ body{
 #Menu{
     list-style: none ;    
     padding: 0px;
+    
 }
 
 #Menu li a{

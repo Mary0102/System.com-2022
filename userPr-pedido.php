@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área do Usuário Comum</title>
+    <title>Área do usuário Programador(a)</title>
     <link rel='stylesheet' href='users.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -95,22 +95,13 @@
     <div id="Bloco-pedido">
       <div class="Bloco-inside">
         <div class="title-pedido" style="background-color: black;">
-          <h1 class="Name-pedido" style="color: #ffff ;" >Descrição</h1>
+          <h1 class="Name-pedido" style="color: #ffff ;" >Solicitações</h1>
         </div>
         <br>
           <div class="pedido">
-            <?php
-              print_r($_POST['pedido']);
-              //$sql = "SELECT * FROM pedido WHERE descricao ";
-              //$result = $conexao->query($sql);
-              //print_r($result);
-              // if($_POST['pedido']) == null{
-               //   echo "Não possui nenhum pedido";
-                //}else{
-                  //Caso exista algum pedido
-                  
-              //}  
-            ?>
+        <!--    <?php
+              //print_r($_POST['pedido']); 
+            ?> -->
             <br>
           </div>
         <br>   
@@ -128,7 +119,7 @@
           <!--  Foto do usuario, e seções que ele possa navegar-->
           <div class="user-icon">
             <img src="Image/user-icon.png" alt="testephoto" id="formaft">
-            <span id="user-name">Julia
+            <span id="user-name">Leticia
              <!-- <?php
               //  print_r($_POST['nome']);
               ?> -->
@@ -144,7 +135,7 @@
             <div class="bloco">
               <span class="li-item">
                 <i class="fa fa-cog" style="font-size:24px" aria-hidden="true" id="icon"></i>
-                <li><a href="#"><p>Editar Perfil</p></a></li>
+                <li><a href="confguser.php"><p>Editar Perfil</p></a></li>
               </span>
             </div> 
             
@@ -158,14 +149,14 @@
             <div class="bloco">
               <span class="li-item">
                 <i class="fa fa-edit" style="font-size:24px" id="icon"></i>
-                <li><a href="userNP.php"><p>Meus Pedidos</p></a></li>
+                <li><a href="userNP.php"><p>Projetos Aceitos</p></a></li>
               </span>
             </div>
               
             <div class="bloco">
               <span class="li-item">
                 <i class="fa fa-plus-square-o" style="font-size:24px" id="icon"></i>
-                <li><a href="Pedido.php"><p>Novo pedido</p></a></li>
+                <li><a href="Pedido.php"><p>Pedidos</p></a></li>
               </span>
             </div>
              

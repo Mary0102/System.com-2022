@@ -67,6 +67,7 @@
         height: 80%;
       }
 
+/***********STYLE NAV BAR**********************/
       .contatos{
           padding-left: 30%;
         }
@@ -80,7 +81,7 @@
             background-color: rgb(44, 44, 44);
             border-radius: 10px;
           }
-
+/***********END STYLE NAV BAR**********************/
 
         #save{
                 color: rgb(255, 255, 255);
@@ -93,7 +94,7 @@
             }
     </style>
 
-
+<!-----------------------------------NAV BAR - BARRA DE NAVEGAÇÃO--------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0,0,0);">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
@@ -124,6 +125,7 @@
     </div>
   </div>
 </nav>
+<!-------------------------------END NAV BAR - BARRA DE NAVEGAÇÃO--------------------------------------->
 
       <br/>
     <h1 align="center" style="color:aliceblue; font-family:EB Garamond" >

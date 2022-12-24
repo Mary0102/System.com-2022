@@ -120,7 +120,7 @@
           <!--  Foto do usuario, e seções que ele possa navegar-->
           <div class="user-icon">
             <img src="Image/user-icon.png" alt="testephoto" id="formaft">
-            <span id="user-name">Leticia
+            <span id="user-name">Usuario Pr
              <!-- <?php
               //  print_r($_POST['nome']);
               ?> -->

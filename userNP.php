@@ -99,8 +99,9 @@
         </div>
         <br>
           <div class="pedido">
-            <?php
-              print_r($_POST['pedido']);
+            <p>Você não possui nenhuma encomenda</p>
+  <!--          <?php
+             // print_r($_POST['pedido']);
               //$sql = "SELECT * FROM pedido WHERE descricao ";
               //$result = $conexao->query($sql);
               //print_r($result);
@@ -110,7 +111,7 @@
                   //Caso exista algum pedido
                   
               //}  
-            ?>
+            ?> -->
             <br>
           </div>
         <br>   
@@ -128,7 +129,7 @@
           <!--  Foto do usuario, e seções que ele possa navegar-->
           <div class="user-icon">
             <img src="Image/user-icon.png" alt="testephoto" id="formaft">
-            <span id="user-name">Julia
+            <span id="user-name">Usuario NP
              <!-- <?php
               //  print_r($_POST['nome']);
               ?> -->
